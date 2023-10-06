@@ -1,3 +1,10 @@
 :host {
   display: block;
 }
+
+.container {
+  box-sizing: border-box;
+  padding: 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+}

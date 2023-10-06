@@ -6,14 +6,35 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class SimpleComponent {
-  @Prop() titleCtr: string;
-  @Prop() color: string = 'blue';
+  @Prop() configCard: {
+    name: string;
+    color: string;
+  };
+  @Prop() dataCard: {
+    name: string;
+    color: string;
+  };
+
 
   render() {
     return (
-      <div>
-        <h1>{this.titleCtr}</h1>
-        <h1>{this.color}</h1>
+      <div class="container-list">
+        <div class="row">
+          <p class="label">
+            {this.configCard.name}:
+          </p>
+          <p class="value">
+            {this.dataCard.name}
+          </p>
+        </div>
+        <div class="row">
+          <p class="label">
+            {this.configCard.color}:
+          </p>
+          <p class="value">
+            {this.dataCard.color}
+          </p>
+        </div>
       </div>
     );
   }
